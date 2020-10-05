@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<html  lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"3cd6539e09",applicationID:"542771822"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(c(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(5),c=e(6),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,n){s[n]=i(p+n,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(l+"tracer",[u.now(),e,t],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&d("lcp",[t[t.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var n=Math.round(e.timeStamp),t={type:e.type};n<=p.now()?t.fid=p.now()-n:n>p.offset&&n<=Date.now()?(n-=p.offset,t.fid=p.now()-n):n=p.now(),g=!0,d("timing",["fi",n,t])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(4),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,y=["click","keydown","mousedown","pointerdown","touchstart"];y.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e){function n(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,n,!1)}n.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],5:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],6:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],7:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?f(e,c,o):o()}function t(t,r,i,o){if(!p.aborted||o){e&&e(t,r,i);for(var a=n(i),c=v(t),f=c.length,u=0;u<f;u++)c[u].apply(a,r);var d=s[w[t]];return d&&d.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return d[e]=d[e]||i(t)}function y(e,n){u(e,function(e,t){n=n||"feature",w[t]=n,n in s||(s[n]=[])})}var h={},w={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:y,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var c="nr@context",f=e("gos"),u=e(5),s={},d={},p=n.exports=i();p.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(w,function(n,t){e[n]||(e[n]=t)});var t=a();f("mark",["onload",t+E.offset],null,"api"),f("timing",["load",t]);var r=l.createElement("script");r.src="https://"+e.agent,n.parentNode.insertBefore(r,n)}}function i(){"complete"===l.readyState&&o()}function o(){f("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(c=Math.max((new Date).getTime(),c))-E.offset}var c=(new Date).getTime(),f=e("handle"),u=e(5),s=e("ee"),d=e(3),p=window,l=p.document,m="addEventListener",v="attachEvent",g=p.XMLHttpRequest,y=g&&g.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:g,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var h=""+location,w={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1177.min.js"},b=g&&y&&y[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:c,now:a,origin:h,features:{},xhrWrappable:b,userAgent:d};e(1),e(2),l[m]?(l[m]("DOMContentLoaded",o,!1),p[m]("load",r,!1)):(l[v]("onreadystatechange",i),p[v]("onload",r)),f("mark",["firstbyte",c],null,"api");var x=0,O=e(7)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(6),a="nr@original",c=Object.prototype.hasOwnProperty,f=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,c,f;try{a=this,r=o(arguments),c="function"==typeof t?t(r,a):t||{}}catch(u){p([u,"",[r,a,i],c])}s(n+"start",[r,a,i],c);try{return f=e.apply(a,r)}catch(d){throw s(n+"err",[r,a,d],c),d}finally{s(n+"end",[r,a,f],c)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,d(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,c,f,u="-"===i.charAt(0);for(f=0;f<n.length;f++)c=n[f],a=e[c],r(a)||(e[c]=t(a,u?c+i:i,o,c))}function s(t,r,i){if(!f||n){var o=f;f=!0;try{e.emit(t,r,i,n)}catch(a){p([a,t,r,i])}f=o}}function d(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){p([r])}for(var i in e)c.call(e,i)&&(n[i]=e[i]);return n}function p(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<link rel="canonical" href="https://www.neiu.edu/about/board-of-trustees/calendar-of-meetings" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="/themes/custom/neiu_main/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="revision" href="https://www.neiu.edu/about/board-of-trustees/calendar-of-meetings" />
+
+    <title>Calendar of Meetings  | Northeastern Illinois University</title>
+    <link rel="stylesheet" media="all" href="/sites/neiu.edu/files/css/css_wm1ObRd9CKpyv-GKqFw3eIHA_kqHeyx16I1Lorq-oBo.css" />
+<link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/npm/@unicorn-fail/drupal-bootstrap-styles@0.0.2/dist/3.4.0/8.x-3.x/drupal-bootstrap.min.css" />
+<link rel="stylesheet" media="all" href="/sites/neiu.edu/files/css/css_7FRCBMm7k3FRuDHnmd-5I3qoLySPCoWEFA_0ovIHLLs.css" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/neiu.edu/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+
+    <link type="text/css" rel="stylesheet" href="https://fast.fonts.net/cssapi/69272adb-4b0d-4e61-bfbc-6260efe4f0fb.css" media="all" />
+    <link rel="stylesheet" href="https://use.typekit.net/ria5yfx.css"/>
+	<!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.3/semantic.min.js"></script>-->
+	<!--<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.3/semantic.min.css" />-->
+ 	<!--<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/themes/basic/assets/fonts/icons.eot" />-->
+ 	<script data-mobi-subdomain="neiu" data-mobi-hide-default-button="" async="" src="https://mobi.visitdays.com/assets/snippet/assets/main.bundle.js"></script>
+  <script type="text/javascript">
+    function searchPrimo() {
+    document.getElementById("primoQuery").value = "any,contains," + document.getElementById("library-landing-search-input").value.replace(/[,]/g, " ");
+    document.forms["searchForm"].submit();
+    }
+  </script>
+  </head>
+  <body class="path-node page-node-type-generic-page has-glyphicons">
+  <!-- Google Tag Manager -->
+	<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MDG7ZG" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<script>
+	(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-MDG7ZG');
+	</script>
+<!-- End Google Tag Manager -->
+    <a href="#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+    <div class="utilities">
+              <div class="region region-utilities">
+    <section id="block-stickyunstickablealertbar" class="block block-block-content block-block-content9ad85efa-812c-4b1f-accc-8afe8fa74ddb clearfix">
+  
+    
+
+      
+            <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><div class="sticky-unstickable-alert-bar"><button class="sticky-unstickable-alert-bar-close-button" type="button">✖</button>
+<p><strong>IMPORTANT COVID-19 NOTICE: </strong>Visit <strong><a href="/about/coronavirus-response">neiu.edu/coronavirus</a> </strong>for information about remote learning, health resources, job opportunities and more.</p>
+<p><strong>ADJUSTED HOURS AND SERVICES:</strong> Find out how to <a href="https://www.neiu.edu/about/coronavirus-response/covid-19-adjusted-hours-and-services"><strong>get in touch</strong></a> with our offices and departments remotely.</p>
+</div>
+</div>
+      
+  </section>
+
+
+  </div>
+
+    </div>
+
+   
+<div>
+    
+
+<div id="logo-menu-row-version-2">
+    <a href="/" class="mega-nav-version-2-logo-anchor">
+        <img id="neiu-mega-nav-neiu-main-logo-img" src="/themes/custom/neiu_main/images/neiu_main_logo.png" alt="Northeastern University Logo">
+    </a>
+
+    <div id="logo-menu-row-version-2-inner-constraint">
+
+        <div class="mega-nav-version-2-no-dropdown-link-div">
+        <a class="mega-nav-version-2-no-dropdown-link" href="https://admissions.neiu.edu" target="_blank">
+          Admissions
+        </a>
+        </div>
+
+        <div class="mega-nav-version-2-link-div" id="mega-nav-version-2-link-financial-aid-div">
+            <a class="mega-nav-version-2-link" id="mega-nav-version-2-link-financial-aid" href="/financial-aid">
+              Financial Aid
+            </a>
+            <div class="mega-nav-version-2-link-dropdown" id="mega-nav-version-2-link-dropdown-financial-aid">
+                <p class="mega-nav-version-2-dropdown-heading">Finance Your Education</p>
+                <div class="mega-nav-version-2-dropdown-row">
+                    <div class="mega-nav-version-2-dropdown-col">
+                        <ul>
+                					<li>
+                						<a href="/financial-aid/financing-your-education">Tuition &amp; Fees</a>
+                						<ul>
+                							<li><a href="/financial-aid/tuition-and-fees-costs-attendance/tuition-information">Tuition Information</a></li>
+                							<li><a href="/financial-aid/tuition-and-fees-costs-attendance/fees-information">Fees Information</a></li>
+                							<li><a href="/financial-aid/financing-your-education/calculating-your-net-cost">Calculating Your Net Cost</a></li>
+                						</ul>
+                					</li>
+                					<li>
+                						<a href="/financial-aid/applying-for-federal-state-assistance">Applying for Federal &amp; State Assistance</a>
+                						<ul>
+                							<li><a href="/financial-aid/applying-for-federal-state-assistance/financial-aid-forms-documents">Financial Aid Forms &amp; Documents</a></li>
+                							<li><a href="/financial-aid/applying-for-federal-state-assistance/summer-financial-aid-resources">Summer Financial Aid Resources</a></li>
+                						</ul>
+                					</li>
+                					<li>
+                						<a href="/financial-aid/consumer-informationstudent-rights-know">Consumer Information</a>
+                					</li>
+                				</ul>
+                    </div>
+                    <div class="mega-nav-version-2-dropdown-col">
+                        <ul>
+                          <li>
+                            <a href="/financial-aid/scholarship-opportunities">Scholarship Opportunities</a>
+                            <ul>
+                              <li>
+                                <a href="/financial-aid/scholarship-opportunities/scholarship-listing">Scholarship Listing</a>
+                              </li>
+                            </ul>
+                          </li>
+                          <li>
+                            <a href="/financial-aid/applying-for-student-loans">Applying for Student Loans</a>
+                          </li>
+                          <li>
+                            <a href="/financial-aid/student-employment-opportunities">Student Employment Opportunities</a>
+                          </li>
+                          <li>
+                            <a href="/financial-aid/understanding-my-financial-account">Understanding My Financial Account</a>
+                          </li>
+                          <li>
+                            <a href="/financial-aid/resources">Resources</a>
+                          </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mega-nav-version-2-link-div" id="mega-nav-version-2-link-academic">
+            <a class="mega-nav-version-2-link" id="mega-nav-version-2-link-academics" href="/academics">
+              Academics
+            </a>
+            <div class="mega-nav-version-2-link-dropdown" id="mega-nav-version-2-link-dropdown-academics">
+                <p class="mega-nav-version-2-dropdown-heading">Explore Our Programs and Services</p>
+                <div class="mega-nav-version-2-dropdown-row">
+                    <div class="mega-nav-version-2-dropdown-col">
+                        <ul>
+                          <li>
+                            <a>Taking Classes</a>
+                            <ul>
+                              <li>
+                                <a href="/academics/registrar-services/class-schedules-and-registration">Class Schedules &amp; Registration</a>
+                              </li>
+                              <li>
+                                <a href="/academics/academic-calendar">Academic Calendar</a>
+                              </li>
+                              <li>
+                                <a href="/academics/academic-advising">Advising Center</a>
+                              </li>
+                              <li>
+                                <a href="/academics/programs">Majors, Minors, Graduate Programs &amp; Certificates</a>
+                              </li>
+                              <li>
+                                <a href="/academics/university-core-curriculumgeneral-education">University Core Curriculum / General Education </a>
+                              </li>
+                              <li>
+                                <a href="/academics/community-professional-education">Community &amp; Professional Education</a>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                    </div>
+                    <div class="mega-nav-version-2-dropdown-col">
+                        <ul>
+                          <li>
+                            <a>Academic Units</a>
+                            <ul>
+                              <li>
+                                <a href="/academics/all-departments">All Academic Departments</a>
+                              </li>
+                              <li>
+                                <a href="/academics/college-of-arts-and-sciences">College of Arts &amp; Sciences</a>
+                              </li>
+                              <li>
+                                <a href="/academics/college-of-business-and-management">College of Business &amp; Management</a>
+                              </li>
+                              <li>
+                                <a href="/academics/daniel-l-goodwin-college-of-education">Daniel L. Goodwin College of Education</a>
+                              </li>
+                              <li>
+                                <a href="/academics/graduate-studies">College of Graduate Studies &amp; Research</a>
+                              </li>
+                              <li>
+                                <a href="/academics/nontraditional-degree-programs">Nontraditional Degree Programs</a>
+                              </li>
+                              <li>
+                                <a href="/academics/carruthers-center">Carruthers Center for Inner City Studies</a>
+                              </li>
+                              <li>
+                                <a href="/academics/el-centro">El Centro</a>
+                              </li>
+                              <li>
+                                <a href="http://admissions.neiu.edu/transfer-center/transfer-center-university-center" target="_blank">University Center of Lake County</a>
+                              </li>
+                              <li>
+                                <a href="/academics/center-college-access-success">Center for College Access and Success</a>
+                              </li>
+                              <li>
+                                <a href="/academics/first-year-experience">First-Year Experience</a>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                    </div>
+                    <div class="mega-nav-version-2-dropdown-col">
+                        <ul>
+                          <li>
+                            <a>Opportunities</a>
+                            <ul>
+                              <li>
+                                <a href="/academics/international-programs">International Programs</a>
+                              </li>
+                              <li>
+                                <a href="/academics/research">Research Resources</a>
+                              </li>
+                              <li>
+                                <a href="/academics/mcnair-scholars">McNair Scholars</a>
+                              </li>
+                              <li>
+                                <a href="/academics/honors-program">University Honors Program</a>
+                              </li>
+                              <li>
+                                <a href="/academics/student-center-science-engagement">Student Center for Science Engagement</a>
+                              </li>
+                              <li>
+                              	<a href="/academics/intensive-english-program-saell">Intensive English Program</a>
+                              </li>
+                            </ul>
+                          </li>
+                          <li>
+                            <a>Resources</a>
+                            <ul>
+                              <li>
+                                <a href="/academics/center-academic-writing">Center for Academic Writing</a>
+                              </li>
+                              <li>
+                                <a href="/academics/academic-affairs/center-teaching-and-learning">Center for Teaching and Learning</a>
+                              </li>
+                              <li>
+                                <a href="/academics/registrar-services">Registrar Services</a>
+                              </li>
+                              <li>
+                                <a href="/academics/registrar-services/transcripts">Transcripts</a>
+                              </li>
+                              <li>
+                                <a href="/academic-catalog">Academic Catalog</a>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mega-nav-version-2-link-div" id="mega-nav-version-2-link-university-life">
+            <a class="mega-nav-version-2-link" id="mega-nav-version-2-link-university-life" href="/university-life">
+              University Life
+            </a>
+            <div class="mega-nav-version-2-link-dropdown" id="mega-nav-version-2-link-dropdown-university-life">
+                <p class="mega-nav-version-2-dropdown-heading">Engage With Northeastern</p>
+                <div class="mega-nav-version-2-dropdown-row">
+                    <div class="mega-nav-version-2-dropdown-col">
+                        <ul>
+                          <li>
+                            <a>Things To Do</a>
+                            <ul>
+                              <li>
+                                <a href="/academics/registrar-services/academic-calendar">Academic Calendar</a>
+                              </li>
+                              <li>
+                                <a href="/university-life/campus-recreation">Campus Recreation</a>
+                              </li>
+                              <li>
+                                <a href="/university-life/student-union">Student Union</a>
+                              </li>
+                              <li>
+                                <a href="/university-life/arts-at-northeastern">Arts at Northeastern</a>
+                              </li>
+                              <li>
+                                <a href="/university-life/box-office">Box Office</a>
+                              </li>
+                              <li>
+                                <a href="/university-life/student-leadership-and-organizations">Student Leadership &amp; Organizations</a>
+                              </li>
+                              <li>
+                                <a href="/university-life/civic-community-engagement">Civic &amp; Community Engagement</a>
+                              </li>
+                            </ul>
+                          </li>
+                          <li>
+                            <a>Resources</a>
+                            <ul>
+                              <li>
+                                <a href="http://library.neiu.edu/">Library</a>
+                              </li>
+                              <li>
+                                <a href="/university-life/pedroso-center">Pedroso Center</a>
+                              </li>
+                              <li>
+                                <a href="https://neiu.edu/university-life/undocumented-student-resources">Undocumented Student Resources</a>
+                              </li>
+                              
+                              <li><a href="/university-life/black-student-success-committee">Black Student Success Committee</a></li>
+
+                              <li>
+                                <a href="/titleix">Title IX</a>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                    </div>
+                    <div class="mega-nav-version-2-dropdown-col">
+                        <ul>
+                          <li>
+                            <a>Support</a>
+                            <ul>
+                              <li>
+                                <a href="/university-life/learning-success-center">Learning Success Center</a>
+                              </li>
+                              <li>
+                                <a href="/university-life/trio-student-support-center">TRIO Student Support Services</a>
+                              </li>
+                              <li>
+                                <a href="/university-life/project-success">Project Success</a>
+                              </li>
+                              <li>
+                                <a href="/university-life/proyecto-palante">Proyecto Pa&rsquo;Lante</a>
+                              </li>
+                              <li><a href="/university-life/student-affairs">Student Affairs</a></li>
+                              <li>
+                                <a href="/university-life/student-rights-responsibilities">Dean of Students</a>
+                              </li>
+                              <li>
+                                <a href="/academics/advising-center">Advising Center</a>
+                              </li>
+                              <li>
+                                <a href="/academics/new-student-and-family-programs">New Student &amp; Family Programs</a>
+                              </li>
+                              <li>
+                                <a href="/sts">Student Transition Services</a>
+                                <ul>
+                                  <li>
+                                    <a href="/academics/student-transition-services/summer-bridge-program">Summer Transition Program</a>
+                                  </li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                    </div>
+                    <div class="mega-nav-version-2-dropdown-col">
+                        <ul>
+                          <li>
+                            <a>Services</a>
+                            <ul>
+                              <li>
+                                <a href="https://neiu.edu/university-life/current-student-resources">All Student Resources</a>
+                              </li>
+                              <li>
+                                <a href="https://neiu.edu/university-life/student-counseling-services">Student Counseling Services</a>
+                              </li>
+                              <li>
+                                <a href="https://neiu.edu/university-life/career-development">Career Development</a>
+                              </li>
+                              <li>
+                                <a href="/university-life/student-health-services">Student Health Services</a>
+                              </li>
+                              <li>
+                                <a href="/university-life/student-disability-services">Student Disability Services</a>
+                              </li>
+                              <li>
+                              	<a href="https://admissions.neiu.edu/veterans-services" target="_blank">Veterans Services</a>
+                              </li>
+                              <li>
+                                <a href="/university-life/student-housing">Student Housing</a>
+                              </li>
+                              <li>
+                                <a href="/university-life/parking">Parking</a>
+                              </li>
+                              <li>
+                                <a href="/university-life/university-police">University Police</a>
+                              </li>
+                              <li>
+                                <a href="/university-life/bookstore">Bookstore</a>
+                              </li>
+                              <li>
+                                <a href="/university-life/child-care-center">Child Care Center</a>
+                              </li>
+                              <li>
+                                <a href="/university-life/technology-services">Technology Services</a>
+                              </li>
+                              <li>
+                                <a href="/university-life/event-conference-services">Event &amp; Conference Services</a>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mega-nav-version-2-link-div" id="mega-nav-version-2-link-alumni-and-giving">
+            <a class="mega-nav-version-2-link" id="mega-nav-version-2-link-alumni-and-giving" href="/alumni-and-giving">
+              Alumni & Giving
+            </a>
+            <div class="mega-nav-version-2-link-dropdown" id="mega-nav-version-2-link-dropdown-alumni-and-giving">
+              <p class="mega-nav-version-2-dropdown-heading">Connect and Donate to Northeastern</p>
+              <div class="mega-nav-version-2-dropdown-row">
+                  <div class="mega-nav-version-2-dropdown-col">
+                      <ul>
+
+                        <li>
+                          <a href="/alumni-and-giving/alumni">Alumni</a>
+                          <ul>
+                            <li>
+                              <a href="/alumni-and-giving/alumni/your-membership">Your Membership</a>
+                            </li>
+                            <li>
+                              <a href="/alumni-and-giving/alumni/alumni-events">Alumni Events</a>
+                            </li>
+                            <!--<li>
+                              <a href="/alumni-and-giving/alumni/alumni-career-resources">Alumni Career Resources</a>
+                            </li>-->
+                            <li>
+                              <a href="/alumni-and-giving/alumni/class-notes">Class Notes</a>
+                            </li>
+                            <li>
+                              <a href="/alumni-and-giving/alumni/office-of-alumni-relations">Office of Alumni Relations</a>
+                            </li>
+                          </ul>
+                        </li>
+
+                      </ul>
+                  </div>
+                  <div class="mega-nav-version-2-dropdown-col">
+                      <ul>
+
+                        <li>
+                          <a href="/alumni-and-giving/giving">Giving</a>
+                          <ul>
+                            <li>
+                              <a href="/alumni-and-giving/giving/giving-opportunities">Giving Opportunities</a>
+                            </li>
+                            <li>
+                              <a href="/alumni-and-giving/giving/impact-of-your-gift">Impact of Your Gift</a>
+                            </li>
+                            <li>
+                              <a href="/alumni-and-giving/giving/scholarships">Scholarships</a>
+                            </li>
+                            <li>
+                              <a href="/alumni-and-giving/giving/northeastern-illinois-university-foundation">Foundation</a>
+                            </li>
+                            <li>
+                              <a href="/alumni-and-giving/giving/meet-our-staff">Meet Our Staff</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li>
+                          <a href="http://campaign.neiu.edu" target="_blank">Transforming Lives</a>
+                          <ul>
+                            <li>
+                              <a href="/alumni-and-giving/initiative-one-extraordinary-scholarship-support" target="_blank">Scholarship Support</a>
+                            </li>
+                            <li>
+                              <a href="/alumni-and-giving/initiative-two-exceptional-learning-environments" target="_blank">Exceptional Learning Environment</a>
+                            </li>
+                          </ul>
+                        </li>
+
+                      </ul>
+                  </div>
+              </div>
+            </div>
+        </div>
+
+        <div class="mega-nav-version-2-link-div" id="mega-nav-version-2-link-about">
+            <a class="mega-nav-version-2-link" id="mega-nav-version-2-link-about" href="/about">
+              About
+            </a>
+            <div class="mega-nav-version-2-link-dropdown" id="mega-nav-version-2-link-dropdown-about">
+              <p class="mega-nav-version-2-dropdown-heading">Learn About Northeastern</p>
+              <div class="mega-nav-version-2-dropdown-row">
+                  <div class="mega-nav-version-2-dropdown-col">
+                      <ul>
+                        <li>
+                          <a>Who We Are</a>
+                          <ul>
+                            <li>
+                              <a href="/news/university-life">Northeastern News</a>
+                            </li>
+                            <li>
+                              <a href="/about/facts-distinctions-accreditations">Facts &amp; Distinctions</a>
+                            </li>
+                            <li>
+                              <a href="/about/community-visitor-guide">Community &amp; Visitor Guide</a>
+                            </li>
+                            <li>
+                              <a href="/about/northeastern-history">Northeastern History</a>
+                            </li>
+                            <li>
+                              <a href="/about/mission-vision-values">Mission &amp; Vision</a>
+                            </li>
+                            <li>
+                              <a href="/about/university-values">University Values</a>
+                            </li>
+                            <li>
+                              <a href="/about/strategic-plan">Strategic Plan</a>
+                            </li>
+                            <li>
+                              <a href="/about/accreditation">Accreditation</a>
+                            </li>
+                            <li>
+                              <a href="/about/institutional-research-assessment">Office of Institutional Research &amp; Assessment</a>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                  </div>
+                  <div class="mega-nav-version-2-dropdown-col">
+                      <ul>
+                        <li>
+                          <a>Our Leadership</a>
+                          <ul>
+                            <li>
+                              <a href="/about/university-leadership">University Leadership</a>
+                              <ul>
+                                <li>
+                                  <a href="/about/university-leadership/president">President</a>
+                                </li>
+                                <li>
+                                  <a href="/about/university-leadership/executive-team">Executive Team</a>
+                                </li>
+                                <li>
+                                  <a href="/about/university-leadership/shared-governance">Shared Governance</a>
+                                </li>
+                              </ul>
+                            </li>
+                            <li>
+                              <a href="/about/board-trustees">Board of Trustees</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li>
+                          <a>Employment</a>
+                          <ul>
+                            <li><a href="/about/working-here">Working Here</a></li>
+                          </ul>
+                        </li>
+                        <li><a>Resources</a>
+                          <ul>
+                            <li>
+                              <a href="/financial-aid/consumer-informationstudent-rights-know">Consumer Information</a>
+                            </li>
+                            <li>
+                              <a href="/complaints-and-grievances">Complaints</a>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                  </div>
+              </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="search-eyebrow-column">
+        <div id="eyebrow-grid-container">
+            
+<div class="eyebrow_navigation_container">
+
+    <div class="eyebrow-up_arrow"></div>
+
+    <div class="eyebrow-cell-wrapper">
+
+        <div class="eyebrow_resources_container">
+
+            <p>Resources</p>
+
+            <ul>
+                <li><a href="https://www.neiu.edu/library">Library</a></li>
+                <li><a href="https://www.neiu.edu/directory">Directory</a></li>
+                <li><a href="https://www.neiu.edu/about/campus-map-and-directions">Map</a></li>
+                <li><a href="https://www.neiu.edu/academics/registrar-services/academic-calendar">Academic Calendar</a></li>
+                <li><a href="https://www.neiu.edu/university-life/university-events-calendar">University Events</a></li>
+                <li><a href="https://neiuport.neiu.edu/cp/home/displaylogin">NEIUport</a></li>
+                <li><a href="https://www.neiu.edu/alumni-and-giving/giving/donate">Donate</a></li>
+            </ul>
+
+        </div>
+
+        <div class="eyebrow_language_container">
+
+            <p>Language</p>
+
+            <div id="google_translate_element"></div>
+            <script type="text/javascript">
+
+                function googleTranslateElementInit() {
+                    new google.translate.TranslateElement({pageLanguage: "en",
+                            includedLanguages: "ar,en,es,fr,hi,ko,pl,zh-CN",
+                            layout:google.translate.TranslateElement.InlineLayout.SIMPLE
+                    }, "google_translate_element");
+                }
+
+            </script>
+            <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+            </script>
+
+
+            <ul>
+                <li><a href="">Arabic</a></li>
+                <li><a href="">Chinese(simplified)</a></li>
+                <li><a href="">English</a></li>
+                <li><a href="">French</a></li>
+                <li><a href="">Hindi</a></li>
+                <li><a href="">Korean</a></li>
+                <li><a href="">Polish</a></li>
+                <li><a href="">Spanish</a></li>
+            </ul>
+
+        </div>
+
+    </div>
+
+    <div class="eyebrow_social_media_container">
+
+        <a class="eyebrow-facebook" href="https://www.neiu.edu/facebook"><img alt="Facebook icon button" src="/themes/custom/neiu_main/images/facebook_logo_white.png"></a>
+
+        <a class="eyebrow-twitter" href="https://www.neiu.edu/twitter"><img alt="Twitter icon button" src="/themes/custom/neiu_main/images/twitter_logo_white.png"></a>
+
+        <a class="eyebrow-instagram" href="https://www.instagram.com/neiulife/"><img alt="Instagram icon button" src="/themes/custom/neiu_main/images/instagram_logo_white.png"></a>
+
+        <a class="eyebrow-youtube" href="https://www.neiu.edu/youtube"><img alt="Youtube icon button" src="/themes/custom/neiu_main/images/youtube_logo_white.png"></a>
+
+        <a class="eyebrow-linkedin" href="https://www.neiu.edu/linkedin"><img alt="Linkedin icon button" src="/themes/custom/neiu_main/images/linkedin_logo_white.png"></a>
+
+    </div>
+
+</div>
+            <img id="eyebrow-grid-icon" src="/themes/custom/neiu_main/images/menu_grid_icon.png" alt="Northeastern menu grid icon">
+        </div>
+        <div id="search-icon-container">
+            <img id="search-icon" src="/themes/custom/neiu_main/images/search_icon.png" alt="Northeastern Search icon">
+        </div>
+    </div>
+
+    <div class="neiu-main-mega-nav-icon">
+
+    	<a href="javascript:void(0);" class="neiu-main-open-hamburger"><img alt="mobile menu icon" src="/themes/custom/neiu_main/images/neiu_main_hamburger.png"></a>
+
+    	<div class="mega-mobile-navigation-eyebrow-search-container">
+
+
+    		<div class="mega-mobile-cell-wrapper">
+    		    <div class="mega-mobile-main-nav-container">
+
+    		        <ul>
+    		            <li><a href="https://admissions.neiu.edu">Admissions</a></li>
+    		            <li><a href="/financial-aid">Financial Aid</a></li>
+    		            <li><a href="/academics">Academics</a></li>
+    		            <li><a href="/university-life">University Life</a></li>
+    		            <li><a href="/alumni-and-giving">Alumni & Giving</a></li>
+    		            <li><a href="/about">About</a></li>
+    		        </ul>
+
+    		    </div>
+
+    		    <div class="mega-mobile-resources-container">
+
+    		        <p>RESOURCES</p>
+
+    		        <ul>
+    		            <li><a href="https://www.neiu.edu/library">Library</a></li>
+    		            <li><a href="https://www.neiu.edu/directory">Directory</a></li>
+    		            <li><a href="https://www.neiu.edu/about/campus-map-and-directions">Map</a></li>
+    		            <li><a href="https://www.neiu.edu/academics/registrar-services/academic-calendar">Academic Calendar</a></li>
+    		            <li><a href="https://www.neiu.edu/university-life/university-events-calendar">University Events</a></li>
+    		            <li><a href="https://neiuport.neiu.edu/cp/home/displaylogin">NEIUPort</a></li>
+    		            <li><a href="https://www.neiu.edu/alumni-and-giving/giving/donate">Donate</a></li>
+    		        </ul>
+
+    		    </div>
+
+    		</div>
+
+    		<div class="mega-mobile-search-container">
+
+    			
+<div class="mega-mobile-google-search-container">
+
+    <script>
+      (function() {
+        var cx = '006692513796319035694:-ndgh_ug4ti';
+        var gcse = document.createElement('script');
+        gcse.type = 'text/javascript';
+        gcse.async = true;
+        gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+            '//www.google.com/cse/cse.js?cx=' + cx;
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(gcse, s);
+      })();
+    </script>
+    <gcse:searchbox-only></gcse:searchbox-only>
+
+</div>
+
+    		</div>
+
+    		<div class="mega-mobile-social-media-container">
+
+    		    <a class="mega-mobile-facebook" href="https://www.neiu.edu/facebook"><img alt="Facebook logo" src="/themes/custom/neiu_main/images/facebook_logo_white.png"></a>
+
+    		    <a class="mega-mobile-twitter" href="https://www.neiu.edu/twitter"><img alt="Twitter logo" src="/themes/custom/neiu_main/images/twitter_logo_white.png"></a>
+
+    		    <a class="mega-mobile-instagram" href="https://www.instagram.com/neiulife/"><img alt="Instagram logo" src="/themes/custom/neiu_main/images/instagram_logo_white.png"></a>
+
+    		    <a class="mega-mobile-youtube" href="https://www.neiu.edu/youtube"><img alt="Youtube logo" src="/themes/custom/neiu_main/images/youtube_logo_white.png"></a>
+
+    		    <a class="mega-mobile-linkedin" href="https://www.neiu.edu/linkedin"><img alt="Linkedin logo" src="/themes/custom/neiu_main/images/linkedin_logo_white.png"></a>
+
+    		</div>
+    	</div>
+    </div>
+
+    
+<div class="mega-nav-google-search-container">
+
+    <div class="google-search-bar-close-button-container">
+
+        <div class="google-search-bar-custom-close-button">x</div>
+
+    </div>
+
+    <script>
+      (function() {
+        var cx = '006692513796319035694:-ndgh_ug4ti';
+        var gcse = document.createElement('script');
+        gcse.type = 'text/javascript';
+        gcse.async = true;
+        gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+            '//www.google.com/cse/cse.js?cx=' + cx;
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(gcse, s);
+      })();
+    </script>
+    <gcse:searchbox-only></gcse:searchbox-only>
+</div>
+    <hr id="mega-nav-version-2-horizontal-rule">
+
+</div>
+</div>
+
+
+
+    
+    
+                <div class="neiu-main-node-title-container">
+      <div class="neiu-main-node-title">
+        <h1>Calendar of Meetings </h1>
+      </div>
+      <div class="neiu-main-node-breadcrumbs-container">
+            <ol class="breadcrumb">
+          <li >
+                  <a href="/">Home</a>
+              </li>
+          <li >
+                  <a href="/about">About</a>
+              </li>
+          <li >
+                  <a href="/about/board-of-trustees">Board of Trustees</a>
+              </li>
+          <li >
+                  Calendar of Meetings
+              </li>
+      </ol>
+
+
+      </div>
+    </div>
+            
+
+            <div role="main" class="main-container  js-quickedit-main-content">
+            
+                                                                                                    <aside class="page-sidebar-unit-dept-homepage-flex-version desktop-primary-nav" role="complementary">
+  <div class="neiu-menu-block">  <div class="region region-sidebar-first">
+    <section id="block-neiucontactusblock" class="block block-neiu-main-helper block-contact-us-block-neiu clearfix">
+  
+    
+
+      <div class='contact-us-block'>
+  <h2>CONTACT US</h2>
+      <p>T (773) 442-5611</p>
+          <p><a href="mailto:bot@neiu.edu">bot@neiu.edu</a></p>
+        <p><a href="/about/contact-us">Contact Us</a></p>
+  </div>
+
+  </section>
+
+<section id="block-neiuconnectblock" class="block block-neiu-main-helper block-connect-block-neiu clearfix">
+  
+    
+
+      <div class='connect-block'>
+  </div>
+
+  </section>
+
+<nav role="navigation" aria-labelledby="-menu" class="neiu-menu-block">
+      
+  <h2 class="primary-nav-header-h2" id="-menu">Board of Trustees</h2>
+  
+
+        
+            <ul class="menu menu--main-about nav">
+                                                <li>
+                <a href="/about/board-of-trustees/board-meeting-materials" data-drupal-link-system-path="node/69866">Board Meeting Materials</a>
+                                    </li>
+                                                  <li>
+                <a href="/about/board-of-trustees/bylaws-governing-policies-and-regulations" data-drupal-link-system-path="node/69856">Bylaws, Governing Policies and Regulations</a>
+                                    </li>
+                                                  <li class="active">
+                <a href="/about/board-of-trustees/calendar-of-meetings" data-drupal-link-system-path="node/69861" class="is-active">Calendar of Meetings</a>
+                                    </li>
+                                                  <li>
+                <a href="/about/board-of-trustees/training" title="Board of Trustees Training Information" data-drupal-link-system-path="node/72166">Training</a>
+                                    </li>
+                                                  <li>
+                <a href="/about/board-of-trustees/public-comment-procedures" data-drupal-link-system-path="node/70271">Public Comment Procedures</a>
+                                    </li>
+                  </ul>
+    
+
+  </nav>
+<section class="context-contact-block block block-neiu-main-helper block-contact-us-block-neiu clearfix">
+  
+    
+
+      <div class='contact-us-block'>
+  <h2>CONTACT US</h2>
+      <p>T (773) 442-5611</p>
+          <p><a href="mailto:bot@neiu.edu">bot@neiu.edu</a></p>
+        <p><a href="/about/contact-us">Contact Us</a></p>
+  </div>
+
+  </section>
+
+<section class="context-connect-block block block-neiu-main-helper block-connect-block-neiu clearfix">
+  
+    
+
+      <div class='connect-block'>
+  </div>
+
+  </section>
+
+
+  </div>
+</div>
+</aside>
+                                                            
+                            
+                                                            <div class="feature-content-container">
+                                                                              
+                
+                                    <section class="page-content">
+
+                
+
+                            
+                                                <a id="main-content"></a>
+                      <div class="region region-content">
+    <div data-drupal-messages-fallback class="hidden"></div>
+            <div class="field field--name-field-generic-body field--type-text-long field--label-hidden field--item"><p>Information about meetings of the Board of Trustees is provided below. All members of the public are welcome to attend.</p>
+<p>Regular board meetings, unless noted otherwise, begin at 1 p.m. and are held at Northeastern Illinois University, 5500 North St. Louis Avenue, Chicago, Ill., 60625. Committee meetings, unless noted otherwise, begin at 8:30 a.m. Confirmed meeting locations and times may be found on the agendas for posted meetings on the <a href="https://neiu.edu/about/board-trustees/board-meeting-materials" rel="noreferrer noopener" target="_blank">Board Meeting Materials</a> page.</p>
+<p>All meetings may include an Executive Session if voted upon by the Board in accordance with the <a href="http://www.ilga.gov/legislation/ilcs/ilcs3.asp?ActID=84&amp;ChapterID=2" rel="noreferrer noopener" target="_blank">Illinois Open Meetings Act</a>.</p>
+<h2>2020 Board Meetings</h2>
+<ul><li>Thursday, January 16 - Academic/Student Affairs and Enrollment Management Committee</li>
+<li>Monday, January 27 - Audit Committee, followed by Finance, Buildings and Grounds Committee</li>
+<li>Thursday, February 13 - Executive Committee - CANCELED</li>
+<li>Thursday, February 13 - Board Meeting</li>
+<li>Thursday, March 19 - *** <strong>POSTPONED ***</strong> Academic/Student Affairs, Enrollment, and Technology Committee</li>
+<li>Monday, March 23 - *** <strong>RESCHEDULED</strong> *** Executive Committee</li>
+<li>Monday, March 23 - <strong>*** POSTPONED ***</strong> Audit Committee</li>
+<li>Monday, March 23 - <strong>*** POSTPONED *** </strong>Finance, Buildings and Grounds Committee</li>
+<li>Thursday, April 16* - Board Meeting</li>
+<li>Monday, May 4 - Special Meeting</li>
+<li>Thursday, May 14 - Academic/Student Affairs, Enrollment, and Technology Committee</li>
+<li>Monday, May 18 - <strong>***CANCELED*** </strong>Audit Committee</li>
+<li>Monday, May 18 - Finance, Buildings and Grounds Committee</li>
+<li>Thursday, June 11 - Board Meeting</li>
+<li>Monday, August 10, 2020 - Executive Committee</li>
+<li>Thursday, August 20 - Academic/Student Affairs, Enrollment, and Technology Committee</li>
+<li>Monday, August 24 - Audit Committee</li>
+<li>Monday, August 24 - Finance, Buildings and Grounds Committee</li>
+<li>Thursday, September 17 - Board Meeting</li>
+<li>Monday, October 12 - Executive Committee</li>
+<li>Thursday, October 22 - Academic/Student Affairs, Enrollment, and Technology Committee</li>
+<li>Monday, October 26 - Audit Committee</li>
+<li>Monday, November 9 - Finance, Buildings and Grounds Committee</li>
+<li>Thursday, November 19 - Board Meeting</li>
+</ul><p><em><strong>*</strong>  El Centro<br /><strong>**</strong> Jacob H. Carruthers Center</em></p>
+<h2>2019 Board Meetings</h2>
+<ul><li>Wednesday, January 16 - <strong>Rescheduled (was previously scheduled for January 17)</strong> Academic/Student Affairs and Enrollment Management Committee</li>
+<li>Thursday, February 14 - <strong>Rescheduled (was previously scheduled for February 7)</strong> Board Meeting</li>
+<li>Thursday, March 21 - Finance, Buildings and Grounds Committee</li>
+<li>Friday, March 29 - Audit Committee</li>
+<li>Thursday, April 18* - Academic/Student Affairs and Enrollment Management Committee</li>
+<li>Thursday, April 18<strong>*</strong> - Board Meeting</li>
+<li>Thursday, May 16 - Academic/Student Affairs and Enrollment Management Committee - <strong>CANCELED</strong></li>
+<li>Thursday, May 23 - Finance, Buildings and Grounds Committee</li>
+<li>Monday, June 3 - Executive Committee - <strong>CANCELED</strong></li>
+<li>Thursday, June 13 - Academic/Student Affairs and Enrollment Management Committee</li>
+<li>Thursday, June 13 - Board Meeting</li>
+<li>Monday July 29 - Executive Committee</li>
+<li>Wednesday, August 14 - Academic/Student Affairs and Enrollment Management Committee</li>
+<li>Tuesday, August 27 - Audit Committee followed by Finance, Buildings and Grounds Committee</li>
+<li>Thursday September 19 - Board Meeting</li>
+<li>Wednesday October 2 - Executive Committee</li>
+<li>Thursday, October 17* - Academic/Student Affairs and Enrollment Management Committee</li>
+<li>Thursday, October 17* - Ad hoc Committee (following the ASAEM Committee meeting)</li>
+<li>Thursday, October 24 - Finance, Buildings and Grounds Committee (<strong>Rescheduled to October 31</strong>)</li>
+<li>Thursday, October 31 - Audit Committee</li>
+<li>Thursday, October 31 - Finance, Buildings and Grounds Committee</li>
+<li>Thursday, November 14** - Ad hoc Committee</li>
+<li>Thursday, November 14<strong>**</strong> - Board Meeting</li>
+<li>Monday, December 9 - Ad hoc Committee</li>
+</ul><p>
+<em><strong>*</strong>  El Centro<br /><strong>**</strong> Jacob H. Carruthers Center</em></p>
+<h2>2018 Board Meetings</h2>
+<ul><li>Tuesday, January 23 - Special Board Meeting</li>
+<li>Thursday, January 25 - <strong>Canceled</strong> - Academic and Student Affairs Committee</li>
+<li>Thursday, February 8 - All Committee Meetings followed by Board Meeting</li>
+<li>Thursday, March 15 - Special Board Meeting</li>
+<li>Thursday, March 29 - <strong>Canceled </strong>- Finance Committee</li>
+<li>Thursday, March 29 - Special Board Meeting</li>
+<li>Thursday, April 19 - All Committee Meetings followed by Board Meeting</li>
+<li>Monday, May 14 - Finance Committee</li>
+<li>Thursday, May 24 - <strong>Canceled</strong> - Academic and Student Affairs Committee</li>
+<li>Thursday, June 14 - <strong>Rescheduled (this meeting was previously scheduled on June 21)</strong> - All Committee Meetings followed by Board Meeting</li>
+<li>Thursday, September 20* - <strong>Rescheduled (this meeting was previously scheduled on September 13)</strong> - All Committee Meetings followed by Board Meeting</li>
+<li>Thursday, October 18 - Finance Committee</li>
+<li>Thursday, November 15 - All Committee Meetings followed by Board Meeting</li>
+</ul><p>*The <strong>September 20</strong> meeting will be held at the Carruthers Center for Inner City Studies, 700 E. Oakwood Blvd., Chicago, Ill., 60653</p>
+</div>
+      
+
+
+  </div>
+
+                
+            </section>
+
+
+                            
+                            
+                                    <div class="clear-unit-dept-home-page-and-flex-content" style="clear:both;"></div>
+                    </div>
+                
+                                    <aside class="page-sidebar-stacked-version" role="complementary">
+  <div class="neiu-menu-block">  <div class="region region-sidebar-first">
+    <section id="block-neiucontactusblock" class="block block-neiu-main-helper block-contact-us-block-neiu clearfix">
+  
+    
+
+      <div class='contact-us-block'>
+  <h2>CONTACT US</h2>
+      <p>T (773) 442-5611</p>
+          <p><a href="mailto:bot@neiu.edu">bot@neiu.edu</a></p>
+        <p><a href="/about/contact-us">Contact Us</a></p>
+  </div>
+
+  </section>
+
+<section id="block-neiuconnectblock" class="block block-neiu-main-helper block-connect-block-neiu clearfix">
+  
+    
+
+      <div class='connect-block'>
+  </div>
+
+  </section>
+
+<nav role="navigation" aria-labelledby="-menu" class="neiu-menu-block">
+      
+  <h2 class="primary-nav-header-h2" id="-menu">Board of Trustees</h2>
+  
+
+        
+            <ul class="menu menu--main-about nav">
+                                                <li>
+                <a href="/about/board-of-trustees/board-meeting-materials" data-drupal-link-system-path="node/69866">Board Meeting Materials</a>
+                                    </li>
+                                                  <li>
+                <a href="/about/board-of-trustees/bylaws-governing-policies-and-regulations" data-drupal-link-system-path="node/69856">Bylaws, Governing Policies and Regulations</a>
+                                    </li>
+                                                  <li class="active">
+                <a href="/about/board-of-trustees/calendar-of-meetings" data-drupal-link-system-path="node/69861" class="is-active">Calendar of Meetings</a>
+                                    </li>
+                                                  <li>
+                <a href="/about/board-of-trustees/training" title="Board of Trustees Training Information" data-drupal-link-system-path="node/72166">Training</a>
+                                    </li>
+                                                  <li>
+                <a href="/about/board-of-trustees/public-comment-procedures" data-drupal-link-system-path="node/70271">Public Comment Procedures</a>
+                                    </li>
+                  </ul>
+    
+
+  </nav>
+<section class="context-contact-block block block-neiu-main-helper block-contact-us-block-neiu clearfix">
+  
+    
+
+      <div class='contact-us-block'>
+  <h2>CONTACT US</h2>
+      <p>T (773) 442-5611</p>
+          <p><a href="mailto:bot@neiu.edu">bot@neiu.edu</a></p>
+        <p><a href="/about/contact-us">Contact Us</a></p>
+  </div>
+
+  </section>
+
+<section class="context-connect-block block block-neiu-main-helper block-connect-block-neiu clearfix">
+  
+    
+
+      <div class='connect-block'>
+  </div>
+
+  </section>
+
+
+  </div>
+</div>
+</aside>
+                            <div style="clear:both;"></div>
+        </div>
+    
+
+
+        
+<section id="footer">
+
+	<div class="footer-container">
+
+		<div class="footer-logo"><a href="/"><img src="/themes/custom/neiu_main/images/neiu_main_logo.png" alt="Northeastern Illinois University logo"></a></div>
+		<div class="contact-info">
+			<p style="text-align: center;"><span>Northeastern Illinois University</span><br />
+			5500 North St. Louis Avenue<br />
+			Chicago, Illinois 60625-4699<br />
+			(773) 583-4050<br />
+			&copy; 2020 Northeastern Illinois University. | <a href="https://www.neiu.edu/legal">Legal</a> |
+						<a href="/user/login">Login</a>
+						</p>
+
+		</div>
+		<div class="social">
+			<a class="linkedin" href="https://www.neiu.edu/linkedin">LinkedIn</a>
+			<a class="youtube" href="https://www.neiu.edu/youtube">Youtube</a>
+			<a class="instagram" href="https://www.instagram.com/neiulife/">Instagram</a>
+			<a class="twitter" href="https://www.neiu.edu/twitter">Twitter</a>
+			<a class="facebook" href="https://www.neiu.edu/facebook">Facebook</a>
+			<div style="clear: both;"></div>
+		</div>
+		<div style="clear: both;"></div>
+	</div>
+</section>
+
+
+<! ----------- STICKY FOOTER ------------------->
+
+<section id="sticky-footer">
+	<div class="footer-nav">
+	<a href="/"><img src="/themes/custom/neiu_main/images/home_footer_icon.png" alt="home button"></a>
+	  <ul>
+		<li><a href="/university-life/student-housing">Housing</a></li>
+		<li><a href="/about/working-here">Employment</a></li>
+		<li><a href="/about/community-and-visitor-guide">Community</a></li>
+		<li><a href="/about/campus-climate">Climate Study</a></li>
+	  </ul>
+	</div>
+
+	<a class="visit" href="https://neiu.elluciancrmrecruit.com/Apply/Account/Create?f=7ec155a5-0168-4865-9623-056be34beede&o=16157838-d6c4-4fbc-8ed3-02442329c2f7&IsInquiry=True">
+		<ul>
+			<li>Request Information</li>
+		</ul>
+	</a>
+	<a class="apply" href="https://www.neiu.edu/apply" target="_blank">
+		<ul>
+			<li>Apply</li>
+		</ul>
+	</a>
+	<a class="give" href="/alumni-and-giving/giving/give-neiu">
+		<ul>
+			<li>Give</li>
+		</ul>
+	</a>
+
+
+	<div style="clear: both;"></div>
+
+</section>
+
+<!------END STICKY FOOTER ------------------------>
+
+<!---BACK TO TOP BUTTON ----ADDED BY TIM WHITE---->
+<!--<a id="totop" style="display: block;" href="#header">Back to Top</a>-->
+
+    
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/69861","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"bootstrap":{"forms_has_error_value_toggle":1,"modal_animation":1,"modal_backdrop":"true","modal_focus_input":1,"modal_keyboard":1,"modal_select_text":1,"modal_show":1,"modal_size":"","popover_enabled":1,"popover_animation":1,"popover_auto_close":1,"popover_container":"body","popover_content":"","popover_delay":"0","popover_html":0,"popover_placement":"right","popover_selector":"","popover_title":"","popover_trigger":"click","tooltip_enabled":1,"tooltip_animation":1,"tooltip_container":"body","tooltip_delay":"0","tooltip_html":0,"tooltip_placement":"auto left","tooltip_selector":"","tooltip_trigger":"hover"},"user":{"uid":0,"permissionsHash":"c7279f4c256bc9bc439ef3ee9c779231d4ead890918e57abad86c43e6487df94"}}</script>
+<script src="/sites/neiu.edu/files/js/js_6GwvFFLSslSM60yOGfi0TDcY8-BR7g-yHenfI5sDWuU.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+<script src="/sites/neiu.edu/files/js/js_MjFdCexfcST8dKZxvRNr9nCiwRGat5-CZFEWVZ01yHQ.js"></script>
+
+
+	<script type="text/javascript">
+		/*<![CDATA[*/
+		(function() {
+			var sz = document.createElement('script'); sz.type = 'text/javascript'; sz.async = true;
+			sz.src = '//siteimproveanalytics.com/js/siteanalyze_52211.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sz, s);
+		})();
+		/*]]>*/
+	</script>
+	
+	<script async src="https://mobi.visitdays.com/assets/snippet/assets/main.bundle.js" data-mobi-hide-default-button></script>
+	
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"3cd6539e09","applicationID":"542771822","transactionName":"YldbZxMCXRFQURVRWlsdeFAVClwMHkIAX1BqUVhQCQY=","queueTime":0,"applicationTime":12,"atts":"ThBYEVsYTh8=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
