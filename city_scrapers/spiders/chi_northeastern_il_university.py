@@ -16,7 +16,7 @@ class ChiNortheasternIlUniversitySpider(CityScrapersSpider):
         Change the `_parse_title`, `_parse_start`, etc methods to fit your scraping
         needs.
         """
-        for item in response.css(".meetings"):
+        for item in response.css("section.page-content ul li"):
             meeting = Meeting(
                 title=self._parse_title(item),
                 description=self._parse_description(item),
@@ -37,7 +37,8 @@ class ChiNortheasternIlUniversitySpider(CityScrapersSpider):
 
     def _parse_title(self, item):
         """Parse or generate meeting title."""
-        return ""
+            regex = '<li>.*?(?P<title>(Academic|Audit|Executive|Board|Finance|Special|Ad\ hoc|All).*?((Committee.*Meeting)|Committee|Meeting)).*?<\/li>'
+        return item.re_first(regex).replace('\xa0', ' ')
 
     def _parse_description(self, item):
         """Parse or generate meeting description."""
