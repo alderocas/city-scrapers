@@ -26,13 +26,13 @@ test_meeting_materials_response = file_response(
 
 spider = ChiNortheasternIlUniversitySpider()
 
-freezer = freeze_time("2020-10-05")
+freezer = freeze_time("2020-11-09")
 freezer.start()
 
 parsed_calendar_items = [item for item in spider.parse(test_calendar_response)]
-parsed_meeting_materials_items = [
-    item for item in spider.parse(test_meeting_materials_response)
-]
+#parsed_meeting_materials_items = [
+#    item for item in spider.parse(test_meeting_materials_response)
+#]
 
 freezer.stop()
 
