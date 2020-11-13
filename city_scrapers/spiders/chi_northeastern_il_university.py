@@ -1,4 +1,3 @@
-import os
 from datetime import datetime, time
 
 from city_scrapers_core.constants import BOARD, COMMITTEE
@@ -10,13 +9,10 @@ class ChiNortheasternIlUniversitySpider(CityScrapersSpider):
     name = "chi_northeastern_il_university"
     agency = "Northeastern Illinois University"
     timezone = "America/Chicago"
-    # start_urls = ["https://www.neiu.edu/about/board-of-trustees/calendar-of-meetings", "https://www.neiu.edu/about/board-of-trustees/board-meeting-materials",]
-    start_urls = [
-        f"file://{os.getcwd()}/tests/files/chi_northeastern_il_university_calendar.html"
-    ]
+    start_urls = ["https://www.neiu.edu/about/board-of-trustees/calendar-of-meetings"]
 
-    title_regex = "<li>.*?(?P<title>(Academic|Audit|Executive|Finance|Ad\\ hoc).*?(Committee)).*?<\\/li>"
-    desc_regex = "<li>.*?(?P<title>(Academic|Audit|Executive|Board|Finance|Special|Ad\\ hoc|All).*?((Committee.*Meeting)|Committee|Meeting)).*?<\\/li>"
+    title_regex = "<li>.*?(?P<title>(Academic|Audit|Executive|Finance|Ad\\ hoc).*?(Committee)).*?<\\/li>"  # noqa
+    desc_regex = "<li>.*?(?P<title>(Academic|Audit|Executive|Board|Finance|Special|Ad\\ hoc|All).*?((Committee.*Meeting)|Committee|Meeting)).*?<\\/li>"  # noqa
 
     def parse(self, response):
         """
@@ -91,22 +87,22 @@ class ChiNortheasternIlUniversitySpider(CityScrapersSpider):
         """Parse or generate location."""
         if year == "2018" and item.re_first("Thursday, September 20\\*"):
             return {
-                "address": "700 E. Oakwood Blvd., Chicago, IL, 60653",
+                "address": "700 E. Oakwood Blvd., Chicago, IL 60653",
                 "name": "Carruthers Center for Inner City Studies",
             }
         elif item.re(".*\\d{1,2}(<strong>)?\\*{2}"):
             return {
-                "address": "700 E. Oakwood Blvd., Chicago, IL, 60653",
+                "address": "700 E. Oakwood Blvd., Chicago, IL 60653",
                 "name": "Jacob H. Carruthers Center",
             }
         elif item.re(".*\\d{1,2}(<strong>)?\\*(?!\\*)"):
             return {
-                "address": "3390 North Avondale Ave., Chicago, IL, 60618",
+                "address": "3390 North Avondale Ave., Chicago, IL 60618",
                 "name": "El Centro",
             }
         else:
             return {
-                "address": "5500 North St. Louis Ave., Chicago, IL., 60625",
+                "address": "5500 North St. Louis Ave., Chicago, IL 60625",
                 "name": "Northeastern Illinois University",
             }
 
